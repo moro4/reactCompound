@@ -59,7 +59,7 @@ export default function App(props) {
 
                   {/* Pages */}
                   <Route path="/orders" element={<Orders />} />
-                  <Route path="/employess" element={<Employees />} />
+                  <Route path="/employees" element={<Employees />} />
                   <Route path="/customers" element={<Customers />} />
 
                   {/* Apps */}
@@ -74,7 +74,7 @@ export default function App(props) {
                   <Route path="/bar" element={<Bar />} />
                   <Route path="/pie" element={<Pie />} />
                   <Route path="/financial" element={<Financial />} />
-                  <Route path="/color-mapping" element={<colorMapping />} />
+                  <Route path="/color-mapping" element={<ColorMapping />} />
                   <Route path="/pyramid" element={<Pyramid />} />
                   <Route path="/stacked" element={<Stacked />} />
                </Routes>
