@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
+import { ContextConsumer } from './contexts/ContextProvider';
 
 import {Navbar, Footer, Sidebar, ThemeSettings} from './components';
 import {Ecommerce, Line, Orders, Calendar, Employees, Stacked, Pyramid, Customers,
@@ -10,7 +11,7 @@ import {Ecommerce, Line, Orders, Calendar, Employees, Stacked, Pyramid, Customer
 import './App.css';
 
 export default function App(props) {
-   const activeMenu = true;
+   const {activeMenu} = ContextConsumer();
    return (
       <BrowserRouter>
          <div className='flex relative dark:bg-main-dark'>
