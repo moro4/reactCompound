@@ -8,15 +8,19 @@ import { ContextConsumer } from '../contexts/ContextProvider';
 import {links} from '../data/dummy';
 
 function Sidebar() {
-   const {activeMenu, setActiveMenu} = ContextConsumer();
+   const {activeMenu, setActiveMenu, screenSize} = ContextConsumer();
    const activeLink = 'flex items-center gap-3 pl-4 py-2.5 rounded-lg \
       underline text-md m-2';
    const normalLink = 'flex items-center gap-3 pl-4 py-2.5 rounded-lg \
       text-md text-gray-700 dark:text-gray-200 dark:hover:text-black \
       hover:bg-light-gray m-2';
 
+   function handleCloseSidebar() {
+      screenSize <= 900 && setActiveMenu(false);
+   }
+
    return (
-      <div className='ml-3 h-screen md:overflow-hidden overflow-auto
+      <div className='ml-3 h-screen md:overflow-hidden over flow-auto
          md:hover:overflow-auto pb-10'
       >
          {activeMenu &&
@@ -49,7 +53,7 @@ function Sidebar() {
                      </p>
                      {item.links.map((link) => (
                         <NavLink key={link.name} to={'/' + link.name}
-                           onClick={() => {}}
+                           onClick={handleCloseSidebar}
                            className={({isActive}) => (
                               isActive ? activeLink : normalLink
                            )}

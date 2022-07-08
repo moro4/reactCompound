@@ -7,8 +7,17 @@ const initialState = {
 
 function ContextProvider({children}) {
    const [activeMenu, setActiveMenu] = useState(true);
+   const [isClicked, setIsClicked] = useState(initialState);
+   const [screenSize, setScreenSize] = useState(undefined);
+
+   function iconClick(navIcon) {
+      setIsClicked({...initialState, [navIcon]: true});
+   }
+
    return (
-      <StateContext.Provider value={{activeMenu, setActiveMenu}}>
+      <StateContext.Provider value={{ activeMenu, setActiveMenu, isClicked,
+         setIsClicked, iconClick, screenSize, setScreenSize }}
+      >
          {children}
       </StateContext.Provider>
    )
