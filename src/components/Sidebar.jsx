@@ -16,11 +16,11 @@ function Sidebar() {
       hover:bg-light-gray m-2';
 
    function handleCloseSidebar() {
-      screenSize <= 900 && setActiveMenu(false);
+      screenSize <= 1200 && setActiveMenu(false);
    }
 
    return (
-      <div className='ml-3 h-screen md:overflow-hidden over flow-auto
+      <div className='ml-3 h-screen md:overflow-hidden overflow-auto
          md:hover:overflow-auto pb-10'
       >
          {activeMenu &&

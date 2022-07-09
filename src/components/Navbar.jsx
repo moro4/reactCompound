@@ -41,7 +41,7 @@ function Navbar() {
    }, []);
 
    useEffect(() => {
-      screenSize <= 900 ? setActiveMenu(false): setActiveMenu(true);
+      screenSize <= 1200 ? setActiveMenu(false): setActiveMenu(true);
    }, [screenSize]);
 
    return (
