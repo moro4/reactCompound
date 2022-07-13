@@ -8,9 +8,9 @@ import { ContextConsumer } from '../contexts/ContextProvider';
 import {links} from '../data/dummy';
 
 function Sidebar() {
-   const {activeMenu, setActiveMenu, screenSize} = ContextConsumer();
+   const {activeMenu, setActiveMenu, screenSize, currentColor} = ContextConsumer();
    const activeLink = 'flex items-center gap-3 pl-4 py-2.5 rounded-lg \
-      underline text-md m-2';
+      text-md text-white m-2';
    const normalLink = 'flex items-center gap-3 pl-4 py-2.5 rounded-lg \
       text-md text-gray-700 dark:text-gray-200 dark:hover:text-black \
       hover:bg-light-gray m-2';
@@ -56,6 +56,9 @@ function Sidebar() {
                            onClick={handleCloseSidebar}
                            className={({isActive}) => (
                               isActive ? activeLink : normalLink
+                           )}
+                           style={({isActive}) => (
+                              {backgroundColor: isActive && currentColor}
                            )}
                         >
                            {link.icon}

@@ -6,6 +6,7 @@ import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy'
 import { ContextConsumer } from '../contexts/ContextProvider';
 
 function Ecommerce() {
+   const {currentColor} = ContextConsumer();
    return (
       <div className='mt-12'>
 
@@ -24,7 +25,7 @@ function Ecommerce() {
                </div>
 
                <div className='mt-6'>
-                  <Button color='white' bgColor='blue' text='Download'
+                  <Button color='white' bgColor={currentColor} text='Download'
                      borderRadius='10px' size='md'
                   />
                </div>
@@ -115,14 +116,14 @@ function Ecommerce() {
                      </div>
 
                      <div className='mt-5'>
-                        <SparkLine id='line-sparkline' currentColor='blue'
+                        <SparkLine id='line-sparkline' currentColor={currentColor}
                            type='Line' height='80px' width='250px'
-                           data={SparklineAreaData} color='blue'
+                           data={SparklineAreaData} color={currentColor}
                         />
                      </div>
 
                      <div className='mt-10'>
-                        <Button color='white' bgColor='blue'
+                        <Button color='white' bgColor={currentColor}
                            text='Download Report' borderRadius='10px'
                         />
                      </div>
