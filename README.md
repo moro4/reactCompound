@@ -10,3 +10,5 @@ The web app itself is a relatively simple dashboard with a sidebar linking out t
 I gained practical insight into react's state management functionality – in particular the context hook, learned the basics on how to implement tailwind, routes, how to structure the project etc.
 
 But what impressed me the most was the convenience of using third-party components like syncfusion: all you have to do is to import the component pass in a few props and there you have it – a great looking and optimized interface spruced up with all the extras you can imagine. As for me, it's only after having being exposed to the sheer power of such libraries that you get to understand what timesaving and efficiency really is.
+
+https://pocdashboard.netlify.app
