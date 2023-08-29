@@ -1,4 +1,7 @@
 # Learning Experience
+
+![](screenshot.jpg)
+
 My first react app created following along a youtube tutorial. It's not 100% complete as it lacks
 a few features and overall is a bit rough around the edges. But that's okay, the goal was not to code up an artificial app that no one is going to use but rather to get a handle on the concept.
 

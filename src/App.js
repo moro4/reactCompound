@@ -15,7 +15,7 @@ export default function App(props) {
    const { activeMenu, themeSettings, setThemeSettings, currentColor,
       currentMode } = ContextConsumer();
    return (
-      <div className={currentMode === 'Dark' && 'dark'}>
+      <div className={currentMode === 'Dark' ? 'dark' : undefined}>
          <BrowserRouter>
             <div className='flex relative dark:bg-secondary-dark'>
 
